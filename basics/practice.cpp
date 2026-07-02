@@ -1,26 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void DoSomething(int arr[], int n)
+void Print(int n)
 {
-    for (int i = 0; i < n; i += 1)
-        cin >> arr[i];
-}
-
-void PrintOutput(int arr[], int n)
-{
-    for (int i = 0; i < n; i += 1)
+    for (int i = 0; i < n; i++)
     {
-        cout << arr[i] << endl;
+        for (int j = 0; j < n; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
     }
 }
 
 int main()
 {
-    int n;
-    cin >> n;
-    int arr[n];
-    DoSomething(arr, n);
-    PrintOutput(arr, n);
-    return 0;
+    int t;
+    cin >> t;
+    for (int i = 0; i < t; i++)
+    {
+        int n;
+        cin >> n;
+        Print(n);
+    }
 }
