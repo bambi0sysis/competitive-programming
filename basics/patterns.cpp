@@ -372,10 +372,82 @@ void pattern22(int n)
         cout << endl;
     }
 }
+void GFG(int n)
+{
+    int stars = 1;
+    for (int i = 1; i <= 2 * n - 1; i++)
+    {
+        for (int j = n - stars; j > 0; j--)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= stars; j++)
+        {
+            cout << "* ";
+        }
+        if (i >= n)
+            stars -= 1;
+        else
+            stars += 1;
+        cout << endl;
+    }
+}
+void GFG2(int n)
+{
+    int space = 2 * n - 5;
+    for (int j = 0; j < 2 * n - 1; j++)
+        cout << "*";
+    cout << endl;
+    for (int i = 0; i < n - 2; i++)
+    {
+        for (int j = 0; j <= i; j++)
+            cout << " ";
+        cout << "*";
+        for (int j = 1; j <= space; j++)
+            cout << " ";
+        cout << "*";
+        space -= 2;
+        cout << endl;
+    }
+    for (int j = 1; j < n; j++)
+        cout << " ";
+    cout << "*";
+}
+void GFG3(int n)
+{
+    int iniSpace = n - 2;
+    int space = 2;
+    for (int i = 1; i <= n; i++)
+        cout << " ";
+    cout << "*" << endl;
+    for (int i = 1; i <= 2 * n - 3; i++)
+    {
+        for (int j = 1; j <= iniSpace; j++)
+            cout << ' ';
+        cout << "*";
+        for (int j = 1; j <= space; j++)
+            cout << " ";
+        cout << "*";
+        if (i < n - 1)
+        {
+            space += 2;
+            iniSpace--;
+        }
+        else
+        {
+            space -= 2;
+            iniSpace++;
+        }
+        cout << endl;
+    }
+    for (int i = 1; i < n; i++)
+        cout << " ";
+    cout << "*" << endl;
+}
 
 int main()
 {
     int n = 5;
-    pattern22(n);
+    GFG3(n);
     return 0;
 }
