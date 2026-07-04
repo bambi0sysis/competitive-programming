@@ -24,3 +24,6 @@ int main()
         Print(n);
     }
 }
+
+// learned c++ stl
+// still confused but will push through it and learn. hopefully
