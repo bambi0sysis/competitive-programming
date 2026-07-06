@@ -1,30 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void Print(int n)
+bool isPalindrome(int x)
 {
-    for (int i = 0; i < n; i++)
+    int n = x;
+    long revN = 0;
+    while (n > 0)
     {
-        for (int j = 0; j < n; j++)
-        {
-            cout << "* ";
-        }
-        cout << endl;
+        int ld = n % 10;
+        revN = (10 * revN) + ld;
+        n /= 10;
     }
+    if (x == revN)
+        return true;
+    return false;
 }
 
 int main()
 {
     int t;
     cin >> t;
-    for (int i = 0; i < t; i++)
-    {
-        int n;
-        cin >> n;
-        Print(n);
-    }
+    if (isPalindrome(t) == 1)
+        cout << "true";
+    else
+        cout << "false";
 }
-
-// learned c++ stl
-// still confused but will push through it and learn. hopefully
-// slsdj
